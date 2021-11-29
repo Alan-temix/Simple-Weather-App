@@ -1,25 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 .App {
-  text-align: center;
   display: flex;
   height: 100vh;
   background-color: #52006A;
   font-family: 'Noto Sans', sans-serif;
+  font-size: x-large;
 }
 
 .card {
   margin: auto;
   background-color: #CD113B;
   color: white;
+  width: 90%;
+  padding: 0 30px;
 }
 
-.first-container {
+.row {
+  width: 100%;
+}
+
+.flex {
   display: flex;
-  padding: 5% 0;
 }
 
-.col-6 {
+.col-md-6 {
   width: 50%;
 }
 

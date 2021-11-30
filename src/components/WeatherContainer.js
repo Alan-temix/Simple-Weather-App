@@ -3,7 +3,6 @@ import Degrees from './Degrees';
 
 const WeatherContainer = ({ latitude, longitude }) => {
     const [data, setData] = useState(null);
-    const [weatherUnit, setWeatherUnit] = useState('celcius');
     const date = new Date();
 
     const capitalizeFirstLetter = (string) => {

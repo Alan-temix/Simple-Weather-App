@@ -20,8 +20,8 @@ const Degrees = ({temp, weatherDescription, icon, tempMax, tempMin, windspeed, s
     }
     
     return(
-        <div className="d-flex">
-            <div className="col-md-6 flex" style={{borderRight: '1px solid gray'}}>
+        <div className="d-xl-flex weather">
+            <div className="col-md-6 flex weather__firstChild">
                 <img src={icon} className="" alt="" style={{maxWidth: '300px'}} />
                 <div className="" style={{alignSelf: 'center'}}>
                     <p className="card-text" style={{fontSize: 'xx-large'}}>{celcius ? `${kelvinToCelcius(temp)}` : `${kelvinToFartenheit(temp)}`}</p>
@@ -39,28 +39,28 @@ const Degrees = ({temp, weatherDescription, icon, tempMax, tempMin, windspeed, s
                     </button>
                 </div>
             </div>
-            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', width: '100%', padding: '0 20px'}}>
-                <div>
+            <div className="weather__secondChild">
+                <div className="item-high">
                     <p>{celcius ? `${kelvinToCelcius(tempMax)}` : `${kelvinToFartenheit(tempMax)}`}</p>
                     <span>High</span>
                 </div>
-                <div>
+                <div className="item-windspeed">
                     <p>{windspeed} m/s</p>
                     <span>Windspeed</span>
                 </div>
-                <div>
+                <div className="item-sunrise">
                     <p>{getTimeUTCtoStr(sunriseUTC)}</p>
                     <span>Sunrise</span>
                 </div>
-                <div>
+                <div className="item-low">
                     <p>{celcius ? `${kelvinToCelcius(tempMin)}` : `${kelvinToFartenheit(tempMin)}`}</p>
                     <span>Low</span>
                 </div>
-                <div>
+                <div className="item-clouds">
                     <p>{clouds}</p>
                     <span>Clouds</span>
                 </div>
-                <div>
+                <div className="item-sunset">
                     <p>{getTimeUTCtoStr(sunsetUTC)}</p>
                     <span>Sunset</span>
                 </div>

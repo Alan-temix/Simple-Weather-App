@@ -38,6 +38,45 @@ body {
   display: flex;
 }
 
+.weather__firstChild {
+  border-right: 1px solid gray;
+}
+
+.weather__secondChild {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  padding: 0 20px;
+  grid-template-areas: 
+    "high windspeed sunrise"
+    "low clouds sunset"
+  ;
+}
+
+.item-high {
+  grid-area: high;
+}
+
+.item-windspeed {
+  grid-area: windspeed;
+}
+
+.item-sunrise {
+  grid-area: sunrise;
+}
+
+.item-low {
+  grid-area: low;
+}
+
+.item-clouds {
+  grid-area: clouds;
+}
+
+.item-sunset {
+  grid-area: sunset;
+}
+
 .col-md-6 {
   width: 50%;
 }
@@ -78,5 +117,43 @@ div.alert {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media(max-width: 1200px) {
+  .weather__firstChild {
+    margin: 0 auto;
+    border: none !important;
+    justify-content: center;
+    width: 100% !important;
+  }
+
+  .weather__secondChild {
+    justify-items: center;
+  }
+}
+
+@media(max-width: 768px) {
+  .weather__secondChild {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "high low"
+    "sunrise sunset"
+    "windspeed clouds"
+    ;
+  }
+}
+
+@media(max-width: 576px) {
+  .weather__secondChild {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "high"
+    "low"
+    "sunrise"
+    "sunset"
+    "windspeed"
+    "clouds"
+    ;
   }
 }

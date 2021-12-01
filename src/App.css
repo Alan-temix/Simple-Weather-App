@@ -49,8 +49,16 @@ body {
   padding: 0 20px;
   grid-template-areas: 
     "high windspeed sunrise"
-    "low clouds sunset"
-  ;
+    "low clouds sunset";
+}
+
+.weather__secondChild p {
+  margin-bottom: 0;
+}
+
+.weather__secondChild span {
+  font-size: small;
+  text-align: center;
 }
 
 .item-high {
@@ -130,6 +138,7 @@ div.alert {
 
   .weather__secondChild {
     justify-items: center;
+    text-align: center;
   }
 }
 

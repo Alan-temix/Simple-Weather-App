@@ -1,5 +1,6 @@
 import { useEffect, useState} from "react";
 import Degrees from './Degrees';
+import Search from './Search';
 
 const WeatherContainer = ({ latitude, longitude }) => {
     const [data, setData] = useState(null);
@@ -33,7 +34,6 @@ const WeatherContainer = ({ latitude, longitude }) => {
         let pressure = data['main']['pressure'];
         let humidity = data['main']['humidity'];
         let clouds = `${data['clouds']['all']} %`
-        // 
         let sunriseUTC = data['sys']['sunrise'];
         let sunsetUTC = data['sys']['sunset'];
 
@@ -63,6 +63,7 @@ const WeatherContainer = ({ latitude, longitude }) => {
                                         <div className="col-sm-8">
                                             <input type="email" className="form-control form-control-lg" id="colFormLabelLg" placeholder="Type here location" />
                                         </div>
+                                        {/* <Search /> */}
                                     </div>
                                 </div>
                                 <div className="modal-footer">
@@ -75,10 +76,6 @@ const WeatherContainer = ({ latitude, longitude }) => {
                         {/* Fin search */}
                     </div>
                     <Degrees temp={temp} tempMax={tempMax} tempMin={tempMin} weatherDescription={capitalizeFirstLetter(sky)} icon={icon} windspeed={windspeed} sunriseUTC={sunriseUTC} sunsetUTC={sunsetUTC} clouds={clouds} />
-                    <p>Windspeed: {windspeed} m/s</p>
-                    <p>Pressure: {pressure} mb</p>
-                    <p>Humidity: {humidity}</p>
-                    <p>Clouds: {clouds}</p>
                 </div>
             </div>
         )

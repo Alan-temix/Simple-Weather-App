@@ -1,6 +1,5 @@
 import { useEffect, useState} from "react";
 import Degrees from './Degrees';
-import Search from './Search';
 
 const WeatherContainer = ({ latitude, longitude }) => {
     const [data, setData] = useState(null);
@@ -31,8 +30,6 @@ const WeatherContainer = ({ latitude, longitude }) => {
         let temp = data['main']['temp'];
         let tempMax = data['main']['temp_max'];
         let tempMin = data['main']['temp_min'];
-        let pressure = data['main']['pressure'];
-        let humidity = data['main']['humidity'];
         let clouds = `${data['clouds']['all']} %`
         let sunriseUTC = data['sys']['sunrise'];
         let sunsetUTC = data['sys']['sunset'];

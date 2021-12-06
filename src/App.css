@@ -154,6 +154,24 @@ div.alert {
 }
 
 @media(max-width: 576px) {
+  .App {
+    height: 100%;
+  }
+
+  .card {
+    margin: 20px auto;
+  }
+  
+  .weather__firstChild {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+
+  .weather__firstChild img {
+    display: block;
+    margin: 0 auto;
+  }
+
   .weather__secondChild {
     grid-template-columns: 1fr;
     grid-template-areas:

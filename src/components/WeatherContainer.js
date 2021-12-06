@@ -21,7 +21,7 @@ const WeatherContainer = ({ latitude, longitude }) => {
       }, [latitude, longitude])
 
     if(data != null) {
-        console.log(data);
+        // console.log(data);
         let city = data['name'];
         let country = data['sys']['country'];
         let sky = data['weather'][0]['description'];

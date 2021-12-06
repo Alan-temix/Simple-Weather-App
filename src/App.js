@@ -2,7 +2,7 @@ import './App.css';
 import {useState, useEffect} from 'react';
 import WeatherContainer from './components/WeatherContainer';
 import Warning from './components/Warning';
-import { getIp } from './services/getIp';
+// import { getIp } from './services/getIp';
 
 function App() {
   const [latitude, setLatitude] = useState(0);
